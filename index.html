@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<div id="main">
+	<section id="one">
+		<img src="../images/grape-band.jpg" width="100%"></img>
+	</section>
+	
+	<section>
+		<header class="major">
+			<h2>Cine suntem?</h2>
+		</header>
+			<p>Via Rahelei este un proiect coordonat de Maria şi Mihai Groza, împreună cu o echipă de voluntari inimoşi.<br>
+			Via Rahelei oferă reculegeri de vindecare pentru toţi aceia care au suferit de pe urma unui avort. Reculegerile sunt concepute de Dr. Theresa Burke, una dintre cele mai mari specialiste în domeniul traumei şi ferventă creştină practicantă.</p>
+			<ul class="actions">
+				<li><a href="../despre" class="button">Aflați mai multe despre noi</a></li>
+			</ul>
+	</section>
+	<section>
+		<header class="major">
+			<h2>Părerile participanților</h2>
+		</header>
+			<blockquote>A fost minunat. A fost foarte profundă reculegerea şi eliberatoare.<br>
+			M-a ajutat să mă împac cu mine pentru ceea ce-am făcut, să conştientizez că copiii mei deja m-au iertat,<br>
+			aşa cum Dumnezeu a făcut-o cu mult timp în urmă.”</blockquote>
+			<ul class="actions">
+				<li><a href="../testimoniale" class="button">Citiți mai multe testimoniale</a></li>
+			</ul>
+	</section>
+	
+  <section>
+    {% for post in site.posts limit:1 %}
+      <header>
+        <h1>{{ post.title }}</h1>
+        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+      </header>
+      <section>
+        {{ post.content }}
+        <p class="editor-link"><a href="cloudcannon:collections/{{ post.path }}" class="button"><strong>&#9998;</strong> Edit post</a></p>
+      </section>
+    {% endfor %}
+  </section>
+
+  <section>
+    <div class="row">
+      {% for post in site.posts offset:1 %}
+        <article class="{% cycle '6u', '6u$' %} 12u(small)">
+          <header>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          </header>
+          <section>
+            {{ post.excerpt }}
+          </section>
+          <footer>
+            <ul class="actions">
+              <li><a href="{{ post.url }}" class="button">Read More</a></li>
+              <li class="editor-link"><a href="cloudcannon:collections/{{ post.path }}" class="button"><strong>&#9998;</strong> Edit post</a></li>
+            </ul>
+          </footer>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>
