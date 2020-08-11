@@ -1,6 +1,6 @@
 locale: "en-US"
 title: Via Rahelei # Title of your site
-url: "https://start-from-complexity.github.io" # the base hostname & protocol for your site
+url: "https://start-from-complexity.github.io/" # the base hostname & protocol for your site
 baseurl: "/testare/" # the subpath of your site, e.g. /blog/
 google_analytics_key: ""
 
@@ -11,7 +11,7 @@ description: > # this means to ignore newlines until "baseurl:"
 # Author details for the jekyll-seo-tag gem
 author:
   name: Your Name
-  email: mihaidgroza@yahoo.com
+  email: qwe@qwe.com
   twitter: # twitter username without the @ symbol
 
 # Social details for the jekyll-seo-tag gem
